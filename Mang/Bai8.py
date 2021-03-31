@@ -11,8 +11,9 @@ for i in range(n):
     arr[i] = randrange(-50,50)
 print(arr)
 x = int(input("Nhap gia tri x: "))
-sx = arr.count(x)
-while arr.count(x) > 0:
-    arr.remove(x)
-print("So phan tu co gia tri ",x, " bi xoa la:  ", sx )
-print(arr)
+k = int(input("Vi tri chen: "))
+if k< 0 or k >= len(arr):
+    print("Vi tri khong hop le")
+else:
+    arr.insert(k,x)
+    print(arr)
